@@ -43,7 +43,7 @@ export class FooController {
 - Interoperation is achieved by targeting JS when compiling Kotlin, and then generating TypeScript definitions for the JS output. 
 - The project can be built and run with `npm start` and `npm run start:prod` similar to the other starter repos. 
 - Kotlin is compiled to JS via Gradle and the included Gradle wrapper. KotlinJS configuration can be seen in `build.gradle`. 
-- The NPM scripts which define the build process can be viewed in `package.json`
+- The NPM scripts which define the build process can be viewed in `package.json`.
 
 #### Build Process
 
