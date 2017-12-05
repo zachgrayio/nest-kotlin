@@ -1,6 +1,6 @@
 ## nest-kotlin
 
-A proof-of-concept project exploring interop between TypeScript and KotlinJS.
+A proof-of-concept project exploring interop between NestJS, TypeScript and KotlinJS.
 
 ## Overview
 
