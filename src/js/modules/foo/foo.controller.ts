@@ -3,11 +3,9 @@
 import {Controller, Get, HttpStatus, Request, Response} from "@nestjs/common";
 import * as interop from "interop"
 
-
 @Controller()
 export class FooController {
-    constructor() {
-    }
+    constructor() {}
 
     @Get('foo')
     async get(@Request() req, @Response() res, next) {
