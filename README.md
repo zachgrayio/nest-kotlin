@@ -27,6 +27,32 @@ Interaction with TypeScript files from Kotlin is not currently supported and as 
 4. Calls `tsc`
 5. Runs with `node index.js` or `node dist/server.js`
 
+## Example
+
+##### foo.kt
+```kotlin
+package foo
+
+fun getFoo():String {
+    return "Foo!"
+}
+```
+
+##### foo.controller.ts
+```typescript
+import * as interop from "interop"
+
+@Controller()
+export class FooController {
+    constructor() {}
+
+    @Get('foo')
+    async get(@Request() req, @Response() res, next) {
+        res.status(HttpStatus.OK).send(interop.foo.getFoo());
+    }
+}
+```
+
 ## Dependencies
 
 In addition to NPM, the JRE/JDK will also be required to run the gradle build and compile the Kotlin code. Use of IntelliJ IDEA is highly recommended for working with Kotlin. 
