@@ -1,7 +1,0 @@
- 5755  git clone https://github.com/nestjs/typescript-starter.git projectX
- 5756  cd projectX
- 5757  npm install
- 5758  npm run start
- 5761  rm -rf .git
- 5762  git init
- 5766  git commit -am "projectX initial work"

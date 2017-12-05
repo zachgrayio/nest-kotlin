@@ -1,13 +1,15 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "nest-kotlin",
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "Nest TypeScript + Kotlin starter repository",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
+    "prestart": "npm run assemble-kotlin && tsc",
     "start:watch": "nodemon",
-    "prestart:prod": "tsc",
-    "start:prod": "node dist/server.js"
+    "prestart:prod": "npm run assemble-kotlin && tsc",
+    "start:prod": "node dist/server.js",
+    "assemble-kotlin": "./gradlew assemble && dtsmake -s ./src/js/interop/interop.js -n \"interop\" --dist ./src/js/interop/interop -p node -e -N && shx cp ./src/js/interop/interop.js ./node_modules"
   },
   "dependencies": {
     "@nestjs/common": "^4.0.0",
@@ -15,6 +17,7 @@
     "@nestjs/microservices": "^4.0.0",
     "@nestjs/testing": "^4.0.0",
     "@nestjs/websockets": "^4.0.0",
+    "kotlin": "^1.2.0",
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.0",
@@ -22,7 +25,10 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.28",
+    "dtsmake": "0.0.10",
     "nodemon": "^1.12.1",
+    "shelljs": "^0.7.8",
+    "shx": "^0.2.2",
     "ts-node": "^3.3.0"
   }
 }

@@ -19,3 +19,9 @@ npm-debug.log
 
 # dist
 /dist
+
+/build
+/lib
+/.gradle
+
+/src/js/interop/interop*
