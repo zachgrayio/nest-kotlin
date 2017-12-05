@@ -10,7 +10,7 @@ Additionally, the interoperation is achieved by targeting JS when compiling Kotl
 
 ### Build Process
 
-The project can be built and run with `npm start` and `npm start:prod` similar to the other starter repos. Kotlin is compiled to JS via Gradle and the included Gradle wrapper. KotlinJS configuration can be seen in `build.gradle`. The NPM scripts which define the build process can be viewed in `package.json`
+The project can be built and run with `npm start` and `npm run start:prod` similar to the other starter repos. Kotlin is compiled to JS via Gradle and the included Gradle wrapper. KotlinJS configuration can be seen in `build.gradle`. The NPM scripts which define the build process can be viewed in `package.json`
 
 #### Steps
 
