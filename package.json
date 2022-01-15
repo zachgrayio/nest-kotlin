@@ -27,7 +27,7 @@
     "@types/node": "^8.0.28",
     "dtsmake": "0.0.10",
     "nodemon": "^1.12.1",
-    "shelljs": "^0.7.8",
+    "shelljs": "^0.8.5",
     "shx": "^0.2.2",
     "ts-node": "^3.3.0"
   }
